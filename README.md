@@ -1,2 +1,7 @@
-# exercism-python-solutions
-This repository contains my solutions to the Python exercises on Exercism.io. The solutions are organized by difficulty level and include the original problem description, my approach to solving each challenge, and the corresponding test cases.
+# Guido's Gorgeous Lasagna
+
+This repository contains the code for the "Guido's Gorgeous Lasagna" exercise.
+
+## Exercism Python Track
+
+You can find the Exercism Python track [here](https://exercism.org/tracks/python).
