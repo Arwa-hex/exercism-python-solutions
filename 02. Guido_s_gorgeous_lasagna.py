@@ -46,14 +46,20 @@ def elapsed_time_in_minutes(number_of_layers, elapsed_bake_time):
 
 # Example usage
 if __name__ == "__main__":
-    # Test the functions with example values
-    layers = 3
-    elapsed_bake = 20
+    try:
+        layers = int(input("Enter the number of layers: "))
+        elapsed_bake = int(input("Enter the elapsed bake time in minutes: "))
 
-    prep_time = preparation_time_in_minutes(layers)
-    remaining_bake_time = bake_time_remaining(elapsed_bake)
-    total_elapsed_time = elapsed_time_in_minutes(layers, elapsed_bake)
+        if layers < 0 or elapsed_bake < 0:
+            raise ValueError("Number of layers and elapsed bake time must be non-negative.")
 
-    print(f"Preparation time for {layers} layers: {prep_time} minutes")  # Output: 6
-    print(f"Remaining bake time: {remaining_bake_time} minutes")         # Output: 20
-    print(f"Total elapsed time: {total_elapsed_time} minutes")           # Output: 26
+        prep_time = preparation_time_in_minutes(layers)
+        remaining_bake_time = bake_time_remaining(elapsed_bake)
+        total_elapsed_time = elapsed_time_in_minutes(layers, elapsed_bake)
+
+        print(f"Preparation time for {layers} layers: {prep_time} minutes")  
+        print(f"Remaining bake time: {remaining_bake_time} minutes")         
+        print(f"Total elapsed time: {total_elapsed_time} minutes")           
+
+    except ValueError as e:
+        print(f"Invalid input: {e}")
